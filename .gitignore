@@ -58,5 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-The Train/Temp/UnityLockfile
-The Train/Library/
+"The Train/Temp/UnityLockfile"
+"The Train/Library/"
+"The Train/UserSettings/"
