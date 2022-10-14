@@ -22,14 +22,13 @@ public class Player : Entity
 	[Header ("ENABLE THIS (ONCE) FOR CUTSCENE")]
 	[SerializeField] bool escaped = false;
 	public bool mHidden { get { return _hidden; } set { if (_hidden == value) return; _hidden = value; collider.isTrigger = value; physicsEnabled = !value; } }
-	[SerializeField] GameObject deathScreen, flashlight;
+	[SerializeField] GameObject deathScreen;
 	[SerializeField] RuntimeAnimatorController enemyAnimator;
 	[SerializeField] Sprite cutsceneSprite;
 	//Get mouse poition
 	Vector2 mousePos;
 	Vector2 mouseAim;
 	public Camera cam;
-	private Transform flTransform;
 
 	protected override void Awake()
 	{
@@ -42,17 +41,6 @@ public class Player : Entity
 			Dialogue lDialog = FindObjectOfType<Dialogue>();
 			if (lDialog != null) { dialogue = lDialog; }
 		}
-		NPC lEnemy = FindObjectOfType<NPC>();
-		if (lEnemy != null)
-		{
-			enemy = FindObjectOfType<NPC>().gameObject;
-		}
-		else
-		{
-			Debug.LogWarning("Enemy does not exist in scene, or could not be found.");
-		}
-		flashlight = this.gameObject.transform.Find("Flashlight").gameObject;
-		flTransform = flashlight.GetComponent<Transform>();
 		animator = this.gameObject.GetComponentInChildren<Animator>();
 		pTransfrom = this.gameObject.GetComponent<Transform>();
 	}
@@ -63,13 +51,13 @@ public class Player : Entity
 		playerControls._2Dmovement.Move.performed += cxt => Move(cxt.ReadValue<float>());
 		playerControls.UI.Interact.performed += _ => Use();
 		playerControls.UI.Interact.performed += _ => Interaction();
-		playerControls.UI.Flashlight_Toggle.performed += _ => ToggleFlashlight();
-		AudioManager.SetVolume("Music1", 0.015f);
-		AudioManager.SetVolume("Step1", 0.12f);
-		AudioManager.SetVolume("Step2", 0.015f);
-		AudioManager.SetVolume("TV", 0.005f);
-		AudioManager.SetVolume("Fridge", 0.008f);
-		AudioManager.SetVolume("Breathing", 0.030f);
+		//playerControls.UI.Flashlight_Toggle.performed += _ => ToggleFlashlight();
+		//AudioManager.SetVolume("Music1", 0.015f);
+		//AudioManager.SetVolume("Step1", 0.12f);
+		//AudioManager.SetVolume("Step2", 0.015f);
+		//AudioManager.SetVolume("TV", 0.005f);
+		//AudioManager.SetVolume("Fridge", 0.008f);
+		//AudioManager.SetVolume("Breathing", 0.030f);
 	}
 
 	private void OnEnable()
@@ -124,15 +112,14 @@ public class Player : Entity
 		mouseAim = playerControls._2Dmovement.Aim.ReadValue<Vector2>();
 
 		mousePos = cam.ScreenToWorldPoint(mouseAim);
-
-		Vector2 lookDir = mousePos - new Vector2(flTransform.position.x, flTransform.position.y);
-		float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-		flTransform.rotation = Quaternion.Euler(0, 0, angle);
 	}
 
 	private void Move(float iDirection)
 	{
 		direction = iDirection;
+		//#AM
+		return;
+
 
 		if (direction != 0 && mGroundDetected && !AudioManager.GetSound("Step1").source.isPlaying)
 		{

@@ -12,7 +12,8 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        
+        //#AM
+        return;
         if (AM != null)
             GameObject.Destroy(AM);
         else
@@ -23,6 +24,8 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
+        //#AM
+        return;
         foreach (Sound s in sounds)
         {
             if (PauseMenu.notFirstLoad)
@@ -48,6 +51,8 @@ public class AudioManager : MonoBehaviour
 
     public static void PlaySound(string name)
     {
+        //#AM
+        return;
         Sound s = Array.Find(AM.sounds, sound => sound.name == name);
         if (s != null)
         {
@@ -56,6 +61,8 @@ public class AudioManager : MonoBehaviour
     }
     public static void StopSound(string name)
     {
+        //#AM
+        return;
         Sound s = Array.Find(AM.sounds, sound => sound.name == name);
         if (s != null)
         {
@@ -64,6 +71,8 @@ public class AudioManager : MonoBehaviour
     }
     public static void MuteSound(string name)
     {
+        //#AM
+        return;
         Sound s = Array.Find(AM.sounds, sound => sound.name == name);
         if (s != null)
         {
@@ -72,6 +81,8 @@ public class AudioManager : MonoBehaviour
     }
     public static void UnmuteSound(string name)
     {
+        //#AM
+        return;
         Sound s = Array.Find(AM.sounds, sound => sound.name == name);
         if (s != null)
         {
@@ -80,6 +91,8 @@ public class AudioManager : MonoBehaviour
     }
     public static void SetVolume(float volume)
     {
+        //#AM
+        return;
         foreach (Sound s in AM.sounds)
         {
             s.source.volume = volume;
@@ -89,6 +102,8 @@ public class AudioManager : MonoBehaviour
 
     public static void SetVolume(string name, float volume)
     {
+        //#AM
+        return;
         Sound s = Array.Find(AM.sounds, sound => sound.name == name);
         if (s != null && s.source != null)
         {
@@ -100,6 +115,8 @@ public class AudioManager : MonoBehaviour
 
     public static void SetSound(string nName, AudioClip newSound)
     {
+        //#AM
+        return;
         Sound s = Array.Find(AM.sounds, sound => sound.name == nName);
         if (s != null)
         {
@@ -108,6 +125,8 @@ public class AudioManager : MonoBehaviour
     }
     public static Sound GetSound(string name)
     {
+        //#AM
+        return null;
         return Array.Find(AM.sounds, sound => sound.name == name);
     }
 }
