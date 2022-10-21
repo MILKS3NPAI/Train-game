@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace WaterKatLLC.AudioManagement
 {
-    public class Audio_Blurber : MonoBehaviour, IAudioPlayer
+    public class Clip_Randomizer_Mono : MonoBehaviour, IAudioPlayer
     {
         [Header("Dependencies")]
         [SerializeField] private GameObject audioGameObjectPrefab;
