@@ -9,43 +9,67 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
       propertyPath: blurbs.Array.size
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
       propertyPath: blurbs.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 4fbfefdf2c53b5946a593ca2f5949d1e, type: 3}
+      objectReference: {fileID: 8300000, guid: 15be4a833b439ef45947e06366d46c41, type: 3}
     - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
       propertyPath: blurbs.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 5001937e019073f4599563cd5add1994, type: 3}
+      objectReference: {fileID: 8300000, guid: 939a435db6cfedb4998eebeefc9eeff9, type: 3}
     - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
       propertyPath: blurbs.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: b062d04701df5464d9d4d5eaf2ac7168, type: 3}
+      objectReference: {fileID: 8300000, guid: be2bcc2954f0f8b4da36fc8b75cb5aac, type: 3}
     - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
       propertyPath: blurbs.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: 0a3e1e987df7e734f8fde537282eeb8e, type: 3}
+      objectReference: {fileID: 8300000, guid: d4b93f24438ec0349b57e63fed29058e, type: 3}
     - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
       propertyPath: blurbs.Array.data[4]
       value: 
-      objectReference: {fileID: 8300000, guid: bea44fc7b3fc9524d873fe0d14fdaf54, type: 3}
+      objectReference: {fileID: 8300000, guid: 2771c47cf3a5df346afcf0082aeac1f9, type: 3}
     - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
       propertyPath: blurbs.Array.data[5]
       value: 
-      objectReference: {fileID: 8300000, guid: f8d55d4a3b63ad54aae31bb1273dc047, type: 3}
+      objectReference: {fileID: 8300000, guid: 3ffc36a96dfbb2c4a9c20d04598b1761, type: 3}
     - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
       propertyPath: blurbs.Array.data[6]
       value: 
-      objectReference: {fileID: 8300000, guid: 926804b7153bfce4f805b16ada49a780, type: 3}
+      objectReference: {fileID: 8300000, guid: 2b10b6c851c0dbd41aa1d6fd0c9b8008, type: 3}
     - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
       propertyPath: blurbs.Array.data[7]
       value: 
-      objectReference: {fileID: 8300000, guid: 3ff06533ad19dd24aa9733555412e838, type: 3}
+      objectReference: {fileID: 8300000, guid: 9e21e40932f7fa2478a37bc0c7e87bb4, type: 3}
+    - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
+      propertyPath: blurbs.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 57704d54f5c131847b96de1720034d4b, type: 3}
+    - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
+      propertyPath: blurbs.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 25f0c5625c6fce048878bc66573b7b41, type: 3}
+    - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
+      propertyPath: blurbs.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fa39ef97fafd9345b1f30a9a99e2c20, type: 3}
+    - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
+      propertyPath: blurbs.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: 939a435db6cfedb4998eebeefc9eeff9, type: 3}
+    - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
+      propertyPath: wait_for_last_blurb_to_end
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465029107875951594, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
+      propertyPath: audioGameObjectPrefab
+      value: 
+      objectReference: {fileID: 4489150396630592712, guid: 93d6e2e0c9a5aab4c898355544fcbeb4, type: 3}
     - target: {fileID: 5973022763200215590, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
       propertyPath: m_Name
-      value: Chicken_Blurber
+      value: Chicken_Blurber Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5973022763200215590, guid: 590ca44e5bd27af4e864e35d2ffd87a0, type: 3}
       propertyPath: m_Icon
