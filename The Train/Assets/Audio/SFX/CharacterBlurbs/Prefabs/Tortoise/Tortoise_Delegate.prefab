@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 113239059259728504, guid: 39d0be87415a54e4fb28b3643a81a412, type: 3}
       propertyPath: m_Pitch
-      value: 0.85
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3661730907085750188, guid: 39d0be87415a54e4fb28b3643a81a412, type: 3}
       propertyPath: m_LocalPosition.x
@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6964019224251590706, guid: 39d0be87415a54e4fb28b3643a81a412, type: 3}
       propertyPath: m_Name
-      value: Tortoise_Audio_Delegate
+      value: Tortoise_Delegate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d0be87415a54e4fb28b3643a81a412, type: 3}
