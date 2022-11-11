@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -355,6 +356,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13cd854ce4283464385d03fa6f6157e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cameraLerpSpeed: 0.4
+  _cameraHeightOffset: 0.5
+  _target: {fileID: 1464347071}
 --- !u!1 &520704688
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +413,7 @@ GameObject:
   - component: {fileID: 1032976692}
   - component: {fileID: 1032976691}
   m_Layer: 0
-  m_Name: Train Spawn Point
+  m_Name: Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -741,7 +757,7 @@ GameObject:
   - component: {fileID: 1585794279}
   - component: {fileID: 1585794278}
   m_Layer: 0
-  m_Name: Train Generator
+  m_Name: Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -759,7 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44596592efcbf21459dd01db2f0bd74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carSeparationDistance: 1
+  _carSeparationDistance: 0.5
   _carScale: 2.5
   _trainCar: {fileID: 3688670013976648629, guid: 5f1c297bf5682d74494e28d09c608ccb, type: 3}
   _trainSpawnPoint: {fileID: 1032976690}
@@ -789,7 +805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592955002}
   m_Layer: 0
-  m_Name: Train Generator
+  m_Name: Train Generation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
