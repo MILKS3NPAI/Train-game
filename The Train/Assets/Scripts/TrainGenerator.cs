@@ -6,20 +6,23 @@ public class TrainGenerator : MonoBehaviour
 {
     [SerializeField] private float _carSeparationDistance, _carScale;
     // Train spawn point is upper left corner of train
-    [SerializeField] private GameObject _trainCar, _trainSpawnPoint;
-    [SerializeField] private int _carCount;
+    [SerializeField] private GameObject _trainSpawnPoint;
+    [SerializeField] private List<GameObject> _trainCars;
     [SerializeField] Transform _trainCarParent;
 
     private void Awake()
     {
-        for (int i = 0; i < _carCount; i++)
+        // Keeps track of length of cars generated so far
+        float subtrainLength = 0;
+        for (int i = 0; i < _trainCars.Count; i++)
         {
-            GameObject newCar = Instantiate(_trainCar);
-            newCar.name = "Train Car (" + i + ")";
-            newCar.transform.SetParent(_trainCarParent.transform);
-            newCar.transform.localScale = _carScale * Vector3.one;
-            newCar.GetComponent<BoxCollider2D>().size *= _carScale;
-            newCar.transform.position = _trainSpawnPoint.transform.position + i * (_trainCar.GetComponent<BoxCollider2D>().size.x * _carScale + _carSeparationDistance) * Vector3.right;
+            _trainCars[i].SetActive(true);
+            _trainCars[i].name = "Train Car (" + i + ")";
+            _trainCars[i].transform.SetParent(_trainCarParent.transform);
+            _trainCars[i].transform.localScale = _carScale * Vector3.one;
+            _trainCars[i].GetComponent<BoxCollider2D>().size *= _carScale;
+            _trainCars[i].transform.position = _trainSpawnPoint.transform.position + subtrainLength * Vector3.right;
+            subtrainLength += _trainCars[i].GetComponent<BoxCollider2D>().size.x * _carScale + _carSeparationDistance;
         }
     }
 }
