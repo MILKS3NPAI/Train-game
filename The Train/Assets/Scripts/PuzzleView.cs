@@ -43,6 +43,7 @@ public class PuzzleView : Useable
 
 	public override void Use(Entity iEntity)
 	{
+		Debug.Log("use?");
 		if (spotType == SpotType.DOOR) //Box and table are only fillins, use whatever name makes sense. However, strings are slow.
 		{
 			//FindObjectOfType<AudioManager>().gameObject.transform.position = transform.position;
@@ -62,6 +63,8 @@ public class PuzzleView : Useable
 		{
 			puzzleCamera.depth = -2;
 			lPlayer.mMovementDisabled = false;
+			lPlayer.physicsEnabled = true;
+			lPlayer.mHidden = false;
 		}
 		else
 		{
@@ -69,7 +72,7 @@ public class PuzzleView : Useable
 			puzzleCamera.depth = 1;
 			lPlayer.transform.position = new Vector3(returnPosition.x, returnPosition.y, lPlayer.transform.position.z);
 			lPlayer.ZeroMovement();
-
+			lPlayer.mMovementDisabled = true;
 		}
 	}
 

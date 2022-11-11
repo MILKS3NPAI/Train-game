@@ -73,7 +73,7 @@ public class Player : Entity
 	protected override void FixedUpdate()
 	{
 
-		//physicsMovement = Vector2.zero;
+		physicsMovement = Vector2.zero;
 		Vector2 lMovement = new Vector2(direction, 0);
 		/*
         if (direction == 1)
@@ -103,8 +103,8 @@ public class Player : Entity
 	}
 	protected override void Update()
 	{
-			AudioManager.MuteSound("Music2");
-			AudioManager.UnmuteSound("Music1");
+			//AudioManager.MuteSound("Music2");
+			//AudioManager.UnmuteSound("Music1");
 		if (escaped)
 			ShowCutscene();
 
@@ -121,14 +121,14 @@ public class Player : Entity
 		return;
 
 
-		if (direction != 0 && mGroundDetected && !AudioManager.GetSound("Step1").source.isPlaying)
+		/*if (direction != 0 && mGroundDetected && !AudioManager.GetSound("Step1").source.isPlaying)
 		{
 			AudioManager.PlaySound("Step1");
 		}
 		else
 		{
 			AudioManager.StopSound("Step1");
-		}
+		}*/
 	}
 
 	void Use()
@@ -182,7 +182,7 @@ public class Player : Entity
 
 	public void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.transform.name.Equals("Chandelier"))
+		/*if (collision.transform.name.Equals("Chandelier"))
 		{
 			collision.gameObject.GetComponent<Animator>().SetBool("PlayerInDiningRoom", true);
 			AudioManager.PlaySound("Glass1");
@@ -218,13 +218,13 @@ public class Player : Entity
 		else if (collision.transform.gameObject.name.Equals("Exit") && canEscape == true)
 		{
 			escaped = true;
-		}
+		}*/
 	}
 
     public void OnTriggerExit2D(Collider2D collision)
     {
 
-		if (collision.transform.parent.gameObject.name.Equals("Kitchen"))
+		/*if (collision.transform.parent.gameObject.name.Equals("Kitchen"))
 		{
 			AudioManager.StopSound("Fridge");
 		}
@@ -249,7 +249,7 @@ public class Player : Entity
 			escapeText.gameObject.SetActive(false);
 			escapeText.enabled = false;
 			Destroy(collision.gameObject);
-		}
+		}*/
 	}
 	private void ShowCutscene()
     {
